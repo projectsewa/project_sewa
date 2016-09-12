@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sewania - Sewa Peralatan Pesta Online</title>
+	<link rel="icon" href="assets/img/logo/logo.png" type="image/png" sizes="16x16">
+	<link rel="stylesheet" href="assets/css/materialize.css">	
+	<link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="assets/css/pace.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="assets/js/pace.js"></script>
+    <script>
+	    paceOptions = {
+	      elements: true
+	    };
+	</script>           
+</head>
+<body class="grey lighten-3">
+	<!-- menu atas -->
+	<div class="navbar-fixed">
+	<nav class="white">
+		<div class="nav-wrapper">
+			<div class="container">
+				<a href="index" class="brand-logo">
+					<div class="row valign-wrapper">					
+						<img src="assets/img/logo/logo2.png" class="responsive-img left valign" width="200px" alt=""><!-- <h5 class="grey-text"><b>SEWA</b>NIA</h5>					 -->
+					</div>				
+				</a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="login" class="grey-text waves-effect">Login</a></li>
+					<li><a href="signup" class="grey-text waves-effect">Signup</a></li>
+					<li><a href="post-ads" class="btn waves-effect white-text">Jadi Partner Kami</a></li>					
+				</ul>	
+			</div>
+			
+			<!-- activate side-bav in mobile view -->
+			<a href="#" data-activates="mobile-demo" class="button-collapse grey-text"><i class="material-icons">menu</i></a>			
+			<!-- navbar for mobile -->
+			<ul class="side-nav teal lighten-1" id="mobile-demo">
+				<li><center><img src="assets/img/logo/logo-w.png" class="responsive-img" width="150px" alt=""></center></li>
+				<li><h5 class="center-align"><b>SEWA</b>NIA</h5></li>
+				<hr>
+				<li><a href="login" class="white-text waves-effect">Login</a></li>
+				<li><a href="signup" class="white-text waves-effect">Signup</a></li>
+				<li><a href="post-ads" class="white-text waves-effect">Jadi Partner Kami</a></li>
+			</ul>
+		</div>
+	</nav>
+	</div>
+	<!-- end menu atas -->
+
+	<main>
+		<div class="container">
+			<div class="row">
+				<!-- ads details content -->
+				<div class="col s12 m9">
+					<div class="ads-details-wrapper box white">
+						<form action="">
+							<div class="col s12">
+								<h2 class="ads-details-title"><strong><i class="material-icons valign-mid">business</i> Services & Portofolio</strong></h2>
+								<div class="row divider"></div><br>
+							</div>
+							<div class="input-field col s12">
+								<input type="text" name="adtitle" id="adtitle" placeholder="Ad title" required>
+								<label for="adtitle">Judul Services</label>
+								<sup>A great title needs at least 60 characters.</sup>
+								<br><br>
+							</div>
+							<div class="input-field col s12">
+ 								<select name="category" required>
+ 									<option value="" selected disabled>Select a category</option>
+ 									<optgroup label="Category A">
+ 										<option value="A1">A1</option>
+ 										<option value="A2">A2</option>
+ 									</optgroup>
+ 									<optgroup label="Category B">
+ 										<option value="B1">B1</option>
+ 										<option value="B2">B2</option>
+ 									</optgroup>
+ 								</select>
+ 								<label for="category">Kategori Services</label>
+							</div>
+							<div class="input-field col s12">
+ 								<select name="type" required>
+ 									<option value="" selected disabled>Select a category</option>
+ 									<optgroup label="Category A">
+ 										<option value="A1">A1</option>
+ 										<option value="A2">A2</option>
+ 									</optgroup>
+ 									<optgroup label="Category B">
+ 										<option value="B1">B1</option>
+ 										<option value="B2">B2</option>
+ 									</optgroup>
+ 								</select>
+ 								<label for="type">Jenis Services</label>
+							</div>
+							<div class="input-field col s12">
+								<textarea name="description" id="description" class="materialize-textarea" placeholder="Describe what makes your ad unique" required></textarea>
+          						<label for="description">Describe ad</label>
+							</div>
+							<div class="input-field col s12">
+								<div class="col s6">
+									<span class="prefix">Rp</span>
+									<input type="text" name="harga" id="harga" placeholder="harga" required>
+									<label for="harga">Harga</label>
+								</div>
+								<div class="col s6">
+									<input type="checkbox" name="negotiable" id="negotiable"/>
+      								<label for="negotiable">Negotiable</label>
+								</div>
+							</div>
+							<div class="input-field col s12">
+								<div class="file-field input-field">
+      								<div class="btn">
+        								<span>Picture</span>
+        								<input type="file" multiple>
+      								</div>
+      								<div class="file-path-wrapper">
+        								<input class="file-path validate" type="text" placeholder="Upload one or more pictures" required>
+      								</div>
+      								<sup>Add up to 5 photos. Use a real image of your product, not catalogs.</sup>
+								</div>
+							</div>
+							<div class="col s12">
+								<br><br>
+								<div class="row divider"></div>
+								<h2 class="ads-details-title"><strong><i class="material-icons valign-mid">person</i> Seller information</strong></h2>
+								<div class="row divider"></div>
+							</div>
+							<div class="input-field col s12">
+								<input type="text" name="seller-name" id="seller-name" placeholder="Seller Name" required>
+								<label for="seller-name">Name</label>
+							</div>
+							<div class="input-field col s12">
+								<input type="email" name="seller-email" id="seller-email" placeholder="Seller Email" required>
+								<label for="seller-email">Seller Email</label>
+							</div>
+							<div class="input-field col s12">
+								<div class="col s6">
+									<input type="text" name="seller-number" id="seller-number" placeholder="Phone Number" required>
+									<label for="seller-number">Phone Number</label>
+								</div>
+								<div class="col s6">
+									<input type="checkbox" name="hide-number" id="hide-number"/>
+      								<label for="hide-number">Hide the phone number on this ads.</label>
+								</div>
+							</div>
+							<div class="input-field col s12">
+ 								<select name="seller-location" required>
+ 									<option value="" selected disabled>Select a location</option>
+									<option value="A1">A1</option>
+									<option value="A2">A2</option>
+									<option value="B1">B1</option>
+									<option value="B2">B2</option>
+ 								</select>
+ 								<label for="seller-location">Location</label>
+							</div>
+							<div class="input-field col s12">
+ 								<select name="seller-city" required>
+ 									<option value="" selected disabled>Select a city</option>
+									<option value="A1">A1</option>
+									<option value="A2">A2</option>
+									<option value="B1">B1</option>
+									<option value="B2">B2</option>
+ 								</select>
+ 								<label for="seller-city">City</label>
+							</div>
+							<div class="row">
+								<div class="col s12">
+									<div class="card grey lighten-3">
+										<div class="card-content">
+											<h3 class="card-title no-margin"><i class="material-icons orange-text">star</i> Make your Ad Premium</h3>
+											<p>Premium ads help sellers promote their product or service by getting their ads more visibility with more
+                        buyers and sell what they want faster. <a href="help.html">Learn more</a></p>
+											<table class="bordered">
+												<tr>
+													<td>
+														<input type="radio" name="type" id="type1"/>
+	      												<label for="type1"><strong>Regular List</strong></label>
+													</td>
+													<td>Rp 1.000</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="radio" name="type" id="type2"/>
+	      												<label for="type2"><strong>Urgent Ad</strong></label>
+													</td>
+													<td>Rp 2.000</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="radio" name="type" id="type3"/>
+	      												<label for="type3"><strong>Top of the Page Ad</strong></label>
+													</td>
+													<td>Rp 5.000</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="radio" name="type" id="type4"/>
+	      												<label for="type4"><strong>Top of the Page Ad + Urgent Ad</strong></label>
+													</td>
+													<td>Rp 10.000</td>
+												</tr>
+												<tr>
+													<td>
+														<select name="payment">
+															<option value="" selected disabled>Select Payment Method</option>
+															<option value="1">Credit / Debit Card</option>
+															<option value="2">Paypal</option>
+														</select>
+													</td>
+													<td>
+														<strong>Payable Amount : Rp 10.000</strong>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col s3">
+											<p class="right-align">
+											Terms
+											</p>
+										</div>
+										<div class="col s9">
+											<p>
+												<input type="checkbox" id="terms"/>
+												<label for="terms">Remember above contact information.</label>
+											</p>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col s9 push-s3">
+											<button type="submit" class="btn">Submit</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</form>
+					</div>
+				</div>
+				<!-- end of ads details content -->
+
+				<!-- ads details sidebar -->
+				<div class="col s12 m3">
+					<div class="ads-details-wrapper center-align">
+						<i class="large material-icons orange-text">local_atm</i>
+						<h3 class="ads-details-side-title"><strong>Pasang Iklan Gratis</strong></h3>
+						<p>Pasang Peralatan Pesta anda dengan beragam kemudahan</p>
+					</div>
+					<div class="ads-details-wrapper card white">
+						<h3 class="ads-details-side-title">How to sell quickly?</h3>
+						<div class="row divider"></div>
+                		<ul class="list-check">
+                    		<li> Use a brief title and  description of the item  </li>
+		                    <li> Make sure you post in the correct category</li>
+		                    <li> Add nice photos to your ad</li>
+		                    <li> Put a reasonable price</li>
+		                    <li> Check the item before publish</li>
+                  		</ul>
+					</div>
+				</div>
+				<!-- end of details content -->
+			</div>
+		</div>
+	</main>
+	<!-- footer -->
+	<footer class="page-footer white">
+		<div class="container">
+			<div class="row center-align grey-text">
+				<div class="col m3 s12">
+					<h5><b>INFORMASI</b></h5>					
+					<a href="#!" class="grey-text waves-effect btn btn-flat">Tentang Kami</a><br>
+					<a href="#!" class="grey-text waves-effect btn btn-flat">Blog</a><br>
+					<a href="#!" class="grey-text waves-effect btn btn-flat">Team Kami</a><br>
+					<a href="#!" class="grey-text waves-effect btn btn-flat">Lowongan</a><br>
+				</div>
+				<div class="col m3 s12">
+					<h5><b>FOLLOW US</b></h5>
+				</div>
+				<div class="col m3 s12">
+					<h5><b>HELP</b></h5>
+					<a href="#!" class="grey-text waves-effect btn btn-flat">Cara Kerja ?</a><br>
+					<a href="#!" class="grey-text waves-effect btn btn-flat">Keamanan</a><br>
+					<a href="#!" class="grey-text waves-effect btn btn-flat">Email Kami</a><br>
+					<a href="#!" class="grey-text waves-effect btn btn-flat">Call(083114380563)</a><br>
+				</div>
+				<div class="col m3 s12">
+					<a href="#!"><img src="assets/img/logo/logo2.png" class="responsive-img" alt=""></a>
+					<p>  Copyright @2016 sewania.com
+					Kebijakan Privasi Syarat dan Ketentuan info@sewania.com</p>
+					<button class="btn btn-large teal waves-effect">SUBSCRIBE</button>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container grey-text">
+				© 2016 Design By LeakWEB
+				<a class="grey-text right" href="http://leakweb.github.io">LeakWEB Contact</a>
+			</div>
+		</div>
+	</footer>
+	<!-- end footer -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="assets/js/materialize.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.button-collapse').sideNav();
+		$('.parallax').parallax();
+		$('select').material_select();
+		$('.modal-trigger').leanModal();
+	});
+</script>
+</body>
+</html>
