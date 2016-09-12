@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sewania - Sewa Peralatan Pesta Online</title>
+	<link rel="icon" href="assets/img/logo/logo.png" type="image/png" sizes="16x16">
+	<link rel="stylesheet" href="assets/css/materialize.css">	
+	<link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="assets/css/pace.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="assets/js/pace.js"></script>
+    <script>
+	    paceOptions = {
+	      elements: true
+	    };
+	</script>           
+</head>
+<body class="grey lighten-3">
+	<!-- menu atas -->
+	<div class="navbar-fixed">
+	<nav class="white">
+		<div class="nav-wrapper">
+			<div class="container">
+				<a href="index" class="brand-logo">
+					<div class="row valign-wrapper">					
+						<img src="assets/img/logo/logo2.png" class="responsive-img left valign" width="200px" alt=""><!-- <h5 class="grey-text"><b>SEWA</b>NIA</h5>					 -->
+					</div>				
+				</a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="login" class="grey-text waves-effect">Login</a></li>
+					<li><a href="signup" class="grey-text waves-effect">Signup</a></li>
+					<li><a href="post-ads" class="btn waves-effect white-text">Jadi Partner Kami</a></li>					
+				</ul>	
+			</div>
+			
+			<!-- activate side-bav in mobile view -->
+			<a href="#" data-activates="mobile-demo" class="button-collapse grey-text"><i class="material-icons">menu</i></a>			
+			<!-- navbar for mobile -->
+			<ul class="side-nav teal lighten-1" id="mobile-demo">
+				<li><center><img src="assets/img/logo/logo-w.png" class="responsive-img" width="150px" alt=""></center></li>
+				<li><h5 class="center-align"><b>SEWA</b>NIA</h5></li>
+				<hr>
+				<li><a href="login" class="white-text waves-effect">Login</a></li>
+				<li><a href="signup" class="white-text waves-effect">Signup</a></li>
+				<li><a href="signup-partner" class="white-text waves-effect">Jadi Partner Kami</a></li>
+			</ul>
+		</div>
+	</nav>
+	</div>
+	<!-- end menu atas -->
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col m12 s12 white box">			
+					<div class="sign-up-main">
+						<i class="medium material-icons left">person_add</i><h5>Account Detail</h5>
+						<hr>
+						<br>
+						<form action="">
+							<div class="row">
+								<div class="input-field">
+									<div class="col m3 s12">
+										<label for="first_name" class="teal-text">Nama Depan <sup class="red-text">*</sup></label>																	
+									</div>
+									<div class="col m9 s12">
+										<br class="hide-on-med-and-up">	
+										<input type="text" id="first_name" class="validate" required="" name="first_name" placeholder="John">									
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field">							
+									<div class="col m3 s12">
+										<label for="last_name" class="teal-text">Nama Belakang <sup class="red-text">*</sup></label>
+									</div>
+									<div class="col m9 s12">
+										<br class="hide-on-med-and-up">
+										<input type="text" id="last_name" class="validate" required="" name="last_name" placeholder="Smith">																	
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field">
+									<div class="col m3 s12">
+										<label for="acc_email" class="teal-text">Email <sup class="red-text">*</sup></label>									
+									</div>
+									<div class="col m9 s12">
+										<br class="hide-on-med-and-up">
+										<input type="email" id="acc_email" class="validate" required="" name="acc_email" placeholder="johnsmith@email.com">																		
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field">
+									<div class="col m3 s12">
+										<label for="acc_pass" class="teal-text">Password <sup class="red-text">*</sup></label>									
+										
+									</div>
+									<div class="col m9 s12">
+										<br class="hide-on-med-and-up">
+										<input type="password" id="acc_pass" class="validate" required="" name="acc_pass" placeholder="************">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field">
+									<div class="col m3 s12">
+										<label for="re-acc_pass" class="teal-text">Re-Password <sup class="red-text">*</sup></label>					
+									</div>
+									<div class="col m9 s12">
+										<br class="hide-on-med-and-up">
+										<input type="password" id="re-acc_pass" class="validate" required="" name="re-acc_pass" placeholder="************">
+										<span class="grey-text"><sup class="red-text">*</sup> Password at least have 5 character</span>
+									</div>
+								</div>								
+							</div>																		
+							<div class="row">
+								<div class="col s12">
+									<i class="medium material-icons left">work</i><h5>Profil Usaha</h5>
+									<hr>								
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field">
+									<div class="col m3 s12">
+										<label for="brand_name" class="teal-text">Nama Brand <sup class="red-text">*</sup></label>									
+									</div>
+									<div class="col m9 s12">
+										<br class="hide-on-med-and-up">
+										<input type="text" id="brand_name" class="validate" required="" name="brand_name" placeholder="Sewania">
+									</div>								
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field">
+									<div class="col m3 s12">
+										<label for="jenis_service" class="teal-text">Jenis Jasa <sup class="red-text">*</sup></label>																		
+									</div>
+									<div class="col m9 s12">
+										<br class="hide-on-med-and-up">
+										<textarea name="jenis_service" id="jenis_service" class="materialize-textarea" placeholder="Masukkan jenis services yang anda berikan"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field">
+									<div class="col m3 s12">
+										<label for="alamat_usaha" class="teal-text">Alamat Usaha<sup class="red-text">*</sup></label>									
+									</div>
+									<div class="col m9 s12">
+										<br class="hide-on-med-and-up">
+										<input type="text" id="alamat_usaha" class="validate" required="" name="alamat_usaha" placeholder="Jln. Bla bla">
+									</div>								
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field">
+									<div class="col m3 s12">
+										<label for="provinsi" class="teal-text">Provinsi <sup class="red-text">*</sup></label>
+										<br class="hide-on-med-and-up">
+										<br class="hide-on-med-and-up">
+									</div>
+									<div class="col m9 s12">
+										<select name="provinsi">
+									      <option value="" disabled selected>--- Pilih Provinsi ---</option>
+									      <option value="1">Option 1</option>
+									      <option value="2">Option 2</option>
+									      <option value="3">Option 3</option>
+									    </select>
+									</div>								
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field">
+									<div class="col m3 s12">
+										<label for="kabupaten" class="teal-text">Kabupaten <sup class="red-text">*</sup></label>
+										<br class="hide-on-med-and-up">
+										<br class="hide-on-med-and-up">
+									</div>
+									<div class="col m9 s12">
+										<select name="kabupaten">
+									      <option value="" disabled selected>--- Pilih Kabupaten ---</option>
+									      <option value="1">Option 1</option>
+									      <option value="2">Option 2</option>
+									      <option value="3">Option 3</option>
+									    </select>
+									</div>								
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field">
+									<div class="col m3 s12">
+										<label for="des_usaha" class="teal-text">Deskripsi Usaha <sup class="red-text">*</sup></label>										
+									</div>
+									<div class="col m9 s12">
+										<br class="hide-on-med-and-up">
+										<textarea name="des_usaha" id="des_usaha" class="materialize-textarea" placeholder="Masukkan deskripsi usaha anda"></textarea>
+									</div>
+								</div>
+							</div>																							
+							<div class="col s12">
+								<p>
+							      <input type="checkbox" id="term" name="term" />
+							      <label for="term">I have read and agree to the <a href="#termcond" class="modal-trigger"> Terms & Conditions </a></label>
+							    </p>
+								<br>
+							</div>
+							<div class="input-field col s12 center">
+								<button type="submit" class="btn btn-large waves-effect">Register</button>		
+								<br>
+								<br>
+							</div>							
+						</form>					
+					</div>
+				</div>
+			</div>
+		</div>	
+	</main>
+
+	<!-- Modal Structure -->
+	<div id="termcond" class="modal modal-fixed-footer">
+		<div class="modal-content">
+			<h4>Terms & Conditions</h4>
+			<p align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quas, tempora enim voluptates commodi quae ea, neque incidunt ipsum nobis qui, culpa vero hic dolorem fuga itaque consequuntur numquam aliquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit saepe, nobis aperiam laboriosam, dignissimos minima itaque nemo ipsum alias labore assumenda nostrum beatae totam eius debitis expedita, quo porro, iusto? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores rem sequi minima quia, facilis quos obcaecati omnis, eum itaque libero? Illo tenetur, unde esse fugiat iste officiis dolor sapiente quibusdam!</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Close</a>
+		</div>
+	</div>
+
+	<footer class="page-footer grey lighten-3">		
+		<div class="footer-copyright white">
+			<div class="container grey-text">
+				© 2016 Design By LeakWEB
+				<a class="grey-text right" href="http://leakweb.github.io">LeakWeb</a>
+			</div>
+		</div>
+	</footer>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="assets/js/materialize.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.button-collapse').sideNav();
+		$('textarea').trigger('autoresize');
+		$('select').material_select();
+		$('.modal-trigger').leanModal();
+	});
+</script>
+</body>
+</html>

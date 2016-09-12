@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sewania - Sewa Peralatan Pesta Online</title>
+	<link rel="icon" href="assets/img/logo/logo.png" type="image/png" sizes="16x16">
+	<link rel="stylesheet" href="assets/css/materialize.css">	
+	<link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="assets/css/pace.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="assets/js/pace.js"></script>
+    <script>
+	    paceOptions = {
+	      elements: true
+	    };
+	</script>           
+</head>
+<body class="grey lighten-3">
+	<!-- menu atas -->
+	<div class="navbar-fixed">
+	<nav class="white">
+		<div class="nav-wrapper">
+			<div class="container">
+				<a href="index" class="brand-logo">
+					<div class="row valign-wrapper">					
+						<img src="assets/img/logo/logo2.png" class="responsive-img left valign" width="200px" alt=""><!-- <h5 class="grey-text"><b>SEWA</b>NIA</h5>					 -->
+					</div>				
+				</a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="login" class="grey-text waves-effect">Login</a></li>
+					<li><a href="signup" class="grey-text waves-effect">Signup</a></li>
+					<li><a href="signup-partner" class="btn waves-effect white-text">Jadi Partner Kami</a></li>					
+				</ul>	
+			</div>
+			
+			<!-- activate side-bav in mobile view -->
+			<a href="#" data-activates="mobile-demo" class="button-collapse grey-text"><i class="material-icons">menu</i></a>			
+			<!-- navbar for mobile -->
+			<ul class="side-nav teal lighten-1" id="mobile-demo">
+				<li><center><img src="assets/img/logo/logo-w.png" class="responsive-img" width="150px" alt=""></center></li>
+				<li><h5 class="center-align"><b>SEWA</b>NIA</h5></li>
+				<hr>
+				<li><a href="login" class="white-text waves-effect">Login</a></li>
+				<li><a href="signup" class="white-text waves-effect">Signup</a></li>
+				<li><a href="signup-partner" class="white-text waves-effect">Jadi Partner Kami</a></li>
+			</ul>
+
+			<a href="#" data-activates="mobile-demo1" class="button-collapse1 grey-text right hide-on-large-only"><i class="material-icons">search</i></a>			
+			<!-- navbar for mobile -->
+			<div class="side-nav teal lighten-1" id="mobile-demo1">
+				<nav>
+				    <div class="nav-wrapper">
+				      <form>
+				        <div class="input-field teal lighten-1">
+				          <input id="search" type="search" required placeholder="Pencarian" name="cari">
+				          <label for="search"><i class="material-icons">search</i></label>
+				          <i class="material-icons">close</i>
+				        </div>
+				        <div class="input-field center">
+				        	<select name="kategori">
+						      <option value="" disabled selected>--- Pilih Kategori ---</option>
+						      <option value="1">Option 1</option>
+						      <option value="2">Option 2</option>
+						      <option value="3">Option 3</option>
+						    </select>
+				        </div>
+				        <center><button type="submit" class="btn btn-large white teal-text waves-effect">Search</button></center>				        
+				      </form>
+				    </div>
+				</nav>
+			</div>			
+		</div>		
+	</nav>	
+	</div>
+	<!-- end menu atas -->
+
+
+	<main>
+		
+	</main>
+	<!-- footer -->
+	<footer class="page-footer white">
+		<div class="container">
+			<div class="row center-align grey-text">
+				<div class="col m3 s12">
+					<h5><b>INFORMASI</b></h5>					
+					<a href="#!" class="grey-text waves-effect btn btn-flat">Tentang Kami</a><br>
+					<a href="#!" class="grey-text waves-effect btn btn-flat">Blog</a><br>
+					<a href="#!" class="grey-text waves-effect btn btn-flat">Team Kami</a><br>
+					<a href="#!" class="grey-text waves-effect btn btn-flat">Lowongan</a><br>
+				</div>
+				<div class="col m3 s12">
+					<h5><b>FOLLOW US</b></h5>
+				</div>
+				<div class="col m3 s12">
+					<h5><b>HELP</b></h5>
+					<a href="#!" class="grey-text waves-effect btn btn-flat">Cara Kerja ?</a><br>
+					<a href="#!" class="grey-text waves-effect btn btn-flat">Keamanan</a><br>
+					<a href="#!" class="grey-text waves-effect btn btn-flat">Email Kami</a><br>
+					<a href="#!" class="grey-text waves-effect btn btn-flat">Call(083114380563)</a><br>
+				</div>
+				<div class="col m3 s12">
+					<a href="#!"><img src="assets/img/logo/logo2.png" class="responsive-img" alt=""></a>
+					<p>  Copyright @2016 sewania.com
+					Kebijakan Privasi Syarat dan Ketentuan info@sewania.com</p>
+					<button class="btn btn-large teal waves-effect">SUBSCRIBE</button>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container grey-text">
+				© 2016 Design By LeakWEB
+				<a class="grey-text right" href="http://leakweb.github.io">LeakWEB Contact</a>
+			</div>
+		</div>
+	</footer>
+	<!-- end footer -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="assets/js/materialize.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.button-collapse').sideNav({
+			edge: 'left'
+		});
+		$('.button-collapse1').sideNav({
+			edge: 'right'
+		});				
+		$('select').material_select();
+		$('.modal-trigger').leanModal();		
+	});
+</script>
+</body>
+</html>
