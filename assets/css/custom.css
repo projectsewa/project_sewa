@@ -67,6 +67,17 @@ main {
 	color: orange;
 }
 
+.sort{
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.store{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 /* Pasek Logic */
 .breadcrumb-wrapper{
 	padding-top: 20px;
