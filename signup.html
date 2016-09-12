@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="assets/css/materialize.css">	
 	<link rel="stylesheet" href="assets/css/custom.css">
 	<link rel="stylesheet" href="assets/css/pace.css">
+	<link rel="stylesheet" href="assets/css/swal.css">	   
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	   
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="assets/js/pace.js"></script>
@@ -157,6 +158,7 @@
 
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="assets/js/materialize.js"></script>
+<script src="assets/js/swal.js"></script>
 <script>
 	$(document).ready(function(){
 		$('.button-collapse').sideNav();
@@ -165,10 +167,11 @@
 		$('.modal-trigger').leanModal();
 	});
 </script>
-<script>
-	function status-success(message, duration){
-         Materialize.toast('Hello World!', duration, ''});
-    }
-</script>
+------kondisi success
+<script>sweetAlert('Congratulations!', 'Register Success', 'success');</script>
+
+
+<!-- -----kondisi error
+<script>sweetAlert('Login Failed!', 'Tolong periksa data yang anda! inputkan', 'error');</script> -->
 </body>
 </html>
