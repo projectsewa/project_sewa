@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sewania - Sewa Peralatan Pesta Online</title>
+	<link rel="icon" href="assets/img/logo/logo.png" type="image/png" sizes="16x16">
+	<link rel="stylesheet" href="assets/css/materialize.css">	
+	<link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="assets/css/pace.css">
+	<link rel="stylesheet" href="assets/css/swal.css">	   
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="assets/js/pace.js"></script>
+    <script>
+	    paceOptions = {
+	      elements: true
+	    };
+	</script>           
+</head>
+<body class="grey lighten-3">
+	<!-- menu atas -->
+	<div class="navbar-fixed">
+	<nav class="white">
+		<div class="nav-wrapper">
+			<div class="container">
+				<a href="index" class="brand-logo">
+					<div class="row valign-wrapper">					
+						<img src="assets/img/logo/logo2.png" class="responsive-img left valign" width="200px" alt=""><!-- <h5 class="grey-text"><b>SEWA</b>NIA</h5>					 -->
+					</div>				
+				</a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="login" class="grey-text waves-effect">Login</a></li>
+					<li><a href="signup" class="grey-text waves-effect">Signup</a></li>
+					<li><a href="signup-partner" class="btn waves-effect white-text">Jadi Partner Kami</a></li>					
+				</ul>	
+			</div>
+			
+			<!-- activate side-bav in mobile view -->
+			<a href="#" data-activates="mobile-demo" class="button-collapse grey-text"><i class="material-icons">menu</i></a>			
+			<!-- navbar for mobile -->
+			<ul class="side-nav teal lighten-1" id="mobile-demo">
+				<li><center><img src="assets/img/logo/logo-w.png" class="responsive-img" width="150px" alt=""></center></li>
+				<li><h5 class="center-align"><b>SEWA</b>NIA</h5></li>
+				<hr>
+				<li><a href="login" class="white-text waves-effect">Login</a></li>
+				<li><a href="signup" class="white-text waves-effect">Signup</a></li>
+				<li><a href="signup-partner" class="white-text waves-effect">Jadi Partner Kami</a></li>
+			</ul>
+		</div>
+	</nav>
+	</div>
+	<!-- end menu atas -->
+	<main>
+		<div class="container">		
+			<div class="row">
+				<div class="col m12 s12 white box">			
+					<div class="sign-up-main">
+						<i class="medium material-icons left">local_post_office</i><h5>Jelaskan Kebutuhan Anda</h5>
+						<div class="row divider"></div>
+						<br>
+						<form action="">
+							<div class="row">
+								<div class="input-field">
+									<div class="col m3 s12">
+										<label for="name" class="teal-text">Nama Anda <sup class="red-text">*</sup></label>																
+									</div>
+									<div class="col m9 s12">
+										<br class="hide-on-med-and-up">	
+										<input type="text" id="name" class="validate" required="" name="name" placeholder="John">									
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field">
+									<div class="col m3 s12">
+										<label for="telp" class="teal-text">Telephone/Phone <sup class="red-text">*</sup></label>																	
+									</div>
+									<div class="col m9 s12">
+										<br class="hide-on-med-and-up">	
+										<input type="text" id="telp" class="validate" required="" name="telp" placeholder="0361000000000">									
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field">
+									<div class="col m3 s12">
+										<label for="acara" class="teal-text">Acara Seperti Apa ? <sup class="red-text">*</sup></label>
+										<br class="hide-on-med-and-up">
+										<br class="hide-on-med-and-up">
+									</div>
+									<div class="col m9 s12">
+										<select name="acara">
+									      <option value="" disabled selected>--- Pilih Tipe Acara---</option>
+									      <option value="1">Option 1</option>
+									      <option value="2">Option 2</option>
+									      <option value="3">Option 3</option>
+									    </select>
+									    <input type="text" id="acara_lainnya" class="validate" required="" name="acara_lainnya" placeholder="Acara Lainnya">
+									</div>								
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field">
+									<div class="col m3 s12">
+										<label for="tamu" class="teal-text">Berapa Banyak Tamunya ? <sup class="red-text">*</sup></label>
+										<br class="hide-on-med-and-up">
+										<br class="hide-on-med-and-up">
+									</div>
+									<div class="col m9 s12">
+										<select name="tamu">
+									      <option value="" disabled selected>--- Pilih---</option>
+									      <option value="1">Option 1</option>
+									      <option value="2">Option 2</option>
+									      <option value="3">Option 3</option>
+									    </select>
+									    <input type="text" id="tamu_lainnya" class="validate" required="" name="tamu_lainnya" placeholder="Jumlah Tamu Lainnya">
+									</div>																	
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field">
+									<div class="col m3 s12">
+										<label for="alamat" class="teal-text">Alamat/Lokasi Acara <sup class="red-text">*</sup></label>																
+									</div>
+									<div class="col m9 s12">
+										<br class="hide-on-med-and-up">	
+										<input type="text" id="alamat" class="validate" required="" name="alamat" placeholder="Jln. Bla Bal">									
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field">
+									<div class="col m3 s12">
+										<label for="start_acara" class="teal-text">Kapan Anda Membutuhkan ? <sup class="red-text">*</sup></label>																
+									</div>
+									<div class="col m9 s12">
+										<br class="hide-on-med-and-up">	
+										<input type="date" id="start_acara" class="validate datepicker" required="" name="start_acara" placeholder="klik untuk menampilkan kalender">									
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field">
+									<div class="col m3 s12">
+										<label for="end_acara" class="teal-text">Kapan Anda Mengembalikan ? <sup class="red-text">*</sup></label>																
+									</div>
+									<div class="col m9 s12">
+										<br class="hide-on-med-and-up">	
+										<input type="date" id="end_acara" class="validate datepicker" required="" name="end_acara" placeholder="klik untuk menampilkan kalender">									
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field">
+									<div class="col m3 s12">
+										<label for="des_acara" class="teal-text col m3 s12">Hal Yang Perlu Kami Ketahui Tentang Acara Anda ? <sup class="red-text">*</sup></label>										
+									</div>
+									<div class="col m9 s12">
+										<br class="hide-on-med-and-up">
+										<br class="hide-on-med-and-up">
+										<textarea name="des_acara" id="des_acara" class="materialize-textarea" placeholder="Masukkan deskripsi acara anda"></textarea>
+									</div>
+								</div>
+							</div>	
+							<div class="input-field col s12 center">
+								<button type="submit" class="btn btn-large waves-effect">Order</button>		
+								<br>
+								<br>
+							</div>							
+						</form>					
+					</div>
+				</div>
+			</div>
+		</div>	
+	</main>
+
+	<!-- Modal Structure -->
+	<div id="termcond" class="modal modal-fixed-footer">
+		<div class="modal-content">
+			<h4>Terms & Conditions</h4>
+			<p align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quas, tempora enim voluptates commodi quae ea, neque incidunt ipsum nobis qui, culpa vero hic dolorem fuga itaque consequuntur numquam aliquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit saepe, nobis aperiam laboriosam, dignissimos minima itaque nemo ipsum alias labore assumenda nostrum beatae totam eius debitis expedita, quo porro, iusto? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores rem sequi minima quia, facilis quos obcaecati omnis, eum itaque libero? Illo tenetur, unde esse fugiat iste officiis dolor sapiente quibusdam!</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Close</a>
+		</div>
+	</div>
+
+	<footer class="page-footer grey lighten-3">		
+		<div class="footer-copyright white">
+			<div class="container grey-text">
+				© 2016 Design By LeakWEB
+				<a class="grey-text right" href="http://leakweb.github.io">LeakWeb</a>
+			</div>
+		</div>
+	</footer>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="assets/js/materialize.js"></script>
+<script src="assets/js/swal.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.button-collapse').sideNav();
+		$('textarea').trigger('autoresize');
+		$('select').material_select();
+		$('.datepicker').pickadate();		
+	});
+</script>
+------kondisi success
+<script>swal({   title: "Terima Kasih ",   text: "<img src='assets/img/ico/order.png' class='responsive-img' />", html: true });</script>
+
+
+<!-- -----kondisi error
+<script>sweetAlert('Login Failed!', 'Tolong periksa data yang anda! inputkan', 'error');</script> -->
+</body>
+</html>
