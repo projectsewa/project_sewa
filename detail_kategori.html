@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="assets/css/materialize.css">	
 	<link rel="stylesheet" href="assets/css/custom.css">
 	<link rel="stylesheet" href="assets/css/pace.css">
+	<link rel="stylesheet" href="assets/css/nouislider.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	   
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="assets/js/pace.js"></script>
@@ -17,7 +18,7 @@
 	    };
 	</script>           
 </head>
-<body class="grey lighten-3">
+<body class="grey lighten-3">	
 	<!-- menu atas -->
 	<div class="navbar-fixed">
 	<nav class="white">
@@ -45,32 +46,7 @@
 				<li><a href="login" class="white-text waves-effect">Login</a></li>
 				<li><a href="signup" class="white-text waves-effect">Signup</a></li>
 				<li><a href="signup-partner" class="white-text waves-effect">Jadi Partner Kami</a></li>
-			</ul>
-
-			<a href="#" data-activates="mobile-demo1" class="button-collapse1 grey-text right hide-on-large-only"><i class="material-icons">search</i></a>			
-			<!-- navbar for mobile -->
-			<div class="side-nav teal lighten-1" id="mobile-demo1">
-				<nav>
-				    <div class="nav-wrapper">
-				      <form>
-				        <div class="input-field teal lighten-1">
-				          <input id="search" type="search" required placeholder="Pencarian" name="cari">
-				          <label for="search"><i class="material-icons">search</i></label>
-				          <i class="material-icons">close</i>
-				        </div>
-				        <div class="input-field center">
-				        	<select name="kategori">
-						      <option value="" disabled selected>--- Pilih Kategori ---</option>
-						      <option value="1">Option 1</option>
-						      <option value="2">Option 2</option>
-						      <option value="3">Option 3</option>
-						    </select>
-				        </div>
-				        <center><button type="submit" class="btn btn-large white teal-text waves-effect">Search</button></center>				        
-				      </form>
-				    </div>
-				</nav>
-			</div>			
+			</ul>			
 		</div>		
 	</nav>	
 	</div>
@@ -84,9 +60,13 @@
 						<li>
 							<div class="collapsible-header"><i class="material-icons">swap_vert</i>Sort by ...</div>
 							<div class="collapsible-body">
-								<form action="">
+								<form action="">									
 									<div class="row sort">
-										<div class="col m4 s12">
+										<h5>Search</h5>
+										<div class="col m6 s12">
+											<input type="text" class="white" name="search" id="search" placeholder="Cari apa yang anda inginkan disini..">
+										</div>
+										<div class="col m6 s12">
 											<select name="sort" id="sorting" class="white">
 										      <option value="" disabled selected>--- Pilih Tipe Sorting---</option>
 										      <option value="1">Option 1</option>
@@ -95,12 +75,19 @@
 										      <option value="4">Lainnya</option>
 										    </select>
 										</div>
-										<div class="col m2 s12">											
-											<input type="text" id="start_price" class="validate white" required="" name="start_price" placeholder="100000">
-										</div>										
-										<div class="col m2 s12">											
-											<input type="text" id="end_price" class="validate white" required="" name="end_price" placeholder="100000000">
+										<h5>Price Range</h5>
+										<div class="col s12">
+											 <div id="slider_price"></div>
+											 <div class="col m3 s6">
+											 	<input type="number" id="min_price" readonly="">
+											 </div>
+											 <div class="col m3 s6">
+											 	<input type="number" id="max_price" readonly="">
+											 </div>											 											 
 										</div>
+										<div class="col s12 center-align">
+											<button type="submit" class="btn btn-large waves-effect waves-green"><i class="material-icons left">search</i>Search</button>
+										</div>										
 									</div>
 								</form>
 							</div>
@@ -262,6 +249,7 @@
 	<!-- end footer -->
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="assets/js/materialize.js"></script>
+<script src="assets/js/nouislider.min.js"></script>
 <script>
 	$(document).ready(function(){
 		$('.button-collapse').sideNav({
@@ -273,6 +261,43 @@
 		$('select').material_select();
 		$('.modal-trigger').leanModal();		
 	});
+</script>
+<script>
+	var slider = document.getElementById('slider_price');
+	  noUiSlider.create(slider, {
+	   start: [20, 80],
+	   connect: true,
+	   step: 1,
+	   range: {
+	     'min': 0,
+	     'max': 100
+	   },
+	   format: wNumb({
+	     decimals: 0
+	   })
+	  });
+
+
+	$(document).ready(function(){
+		var min_p = document.getElementById('min_price');
+		var max_p = document.getElementById('max_price');
+		slider.noUiSlider.on('update', function(values, handle){
+			var value = values[handle];
+			  	if (handle) {
+			  		max_p.value = value;
+			  	}else{
+			  		min_p.value = value;
+			  	}
+		});
+
+		min_p.addEventListener('change', function(){
+			slider.noUiSlider.set([null, this.value]);
+		});
+
+		max_p.addEventListener('change', function(){
+			slider.noUiSlider.set([null, this.value]);
+		});
+	});	
 </script>
 </body>
 </html>
