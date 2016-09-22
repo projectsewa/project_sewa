@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Signup Sewania Partner</title>
+	<link rel="icon" href="assets/img/logo/logo.png" type="image/png" sizes="16x16">
+	<link rel="stylesheet" href="assets/css/materialize.css">	
+	<link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="assets/css/pace.css">
+	<link rel="stylesheet" href="assets/css/swal.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="assets/js/pace.js"></script>
+    <script>
+	    paceOptions = {
+	      elements: true
+	    };
+	</script>           
+</head>
+<body>
+	<main>
+		<div class="container">
+			<div class="row logo-signup-partner">
+				<div class="col s12 center">										
+				</div>
+				<div class="col s12">					
+					<div class="card center-align">
+						<div class="card-content teal-text">
+							<img src="assets/img/logo/logo2.png" alt="" class="responsive-img" width="350px">
+							<h4 class="teal-text">Selamat</h4>
+							<p class="teal-text">Anda telah bergabung menjadi vendor di sewania.com<br>
+							Silahkan mengikuti langkah berikut agar service anda terpublikasi di sewania.com.
+							<br> Klik verify my account, agar kami mengetahui akun yang anda daftarkan <b class="red-text">Asli</b><br>
+							Silahan cek kode verifikasi pada email anda.
+							</p>
+
+						</div>
+						<div class="card-action">
+							<div class="row">
+								<form action="">
+									<div class="input field col s6">
+										<input type="number" name="code-verifikasi" class="validate" required="" autofocus="" placeholder="Masukan code verifikasi">
+									</div>
+									<div class="input-field col s6">																			
+										<select name="jenis-service" id="jenis-service">
+									      <option value="" disabled selected>--- Pilih Jenis Service ---</option>
+									      <option value="1">Paket Pesta</option>
+									      <option value="2">Perlengkapan Pesta</option>									      
+									    </select>										
+									</div>
+									<div class="center-align">
+										<button type="submit" class="btn btn-flat teal white-text">Submit</button>
+									</div>
+								</form>
+							</div>
+						</div>						
+					</div>											
+				</div>				
+			</div>
+		</div>
+	</main>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="assets/js/materialize.js"></script>
+<script src="assets/js/swal.js"></script>	
+<script>
+	$(document).ready(function(){
+		$('select').material_select();
+	});
+</script>
+<!-- ------kondisi success -->
+<script>sweetAlert('Congratulations!', 'Akun anda telah sukses diaktifasi, selamat menggunakan jasa dari sewania.com', 'success');</script>
+
+
+<!-- -----kondisi error
+<script>sweetAlert('Login Failed!', 'Tolong periksa data yang anda! inputkan', 'error');</script> -->
+</body>
+</html>
