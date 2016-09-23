@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sewania : Nama Toko</title>
+	<link rel="icon" href="assets/img/logo/logo.png" type="image/png" sizes="16x16">
+	<link rel="stylesheet" href="assets/css/materialize.css">	
+	<link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="assets/css/pace.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="assets/js/pace.js"></script>
+    <script>
+	    paceOptions = {
+	      elements: true
+	    };
+	</script>           
+</head>
+<body class="grey lighten-3">	
+	<nav class="white">
+		<div class="nav-wrapper">
+			<div class="container">
+				<a href="#!" class="brand-logo teal-text"><i class="material-icons">store</i>Nama Toko</a>
+				<ul class="right hide-on-med-and-down">
+					<li class="teal-text">Username</li>
+					<li><img src="assets/img/ava/1.png" class="responsive-img circle brand-logo" alt="" width="50px"></li>					
+				</ul>							
+			</div>
+
+			<a href="#" data-activates="mobile-demo" class="button-collapse grey-text"><i class="material-icons">menu</i></a>						
+			<!-- navbar for mobile -->
+			<ul class="side-nav teal lighten-1" id="mobile-demo">				
+				<li><h5 class="center-align"><b>Nama Toko</b></h5></li>
+				<div class="divider"></div>
+				<li class="white"><a href="#!" class="teal-text"><b>Dashboard</b></a></li>
+				<li><a href="account-home" class="white-text waves-effect"><i class="material-icons left white-text">home</i>My Profile</a></li>
+				<li><a href="#!" class="white-text waves-effect"><i class="material-icons left white-text">close</i>Logout</a></li>
+				<div class="divider"></div>
+				<li class="white"><a href="#!" class="teal-text"><b>Services</b></a></li>
+				<li class="active"><a href="#!" class="white-text waves-effect"><i class="material-icons left white-text">note_add</i>Tambah Iklan Baru</a></li>
+				<li><a href="#!" class="white-text waves-effect"><i class="material-icons left white-text">shopping_cart</i>Pesan<span class="new badge">99</span></a></li>
+				<li><a href="#!" class="white-text waves-effect"><i class="material-icons left white-text">beach_access</i>Peralatan Pesta<span class="new badge" data-badge-caption="item">400</span></a></li>
+				<li><a href="#!" class="white-text waves-effect"><i class="material-icons left white-text">work</i>Paket Pesta<span class="new badge" data-badge-caption="paket">4</span></a></li>				
+			</ul>
+		</div>
+	</nav>
+	
+	<main>
+		<div class="row">
+			<div class="col s12 m3 left hide-on-med-and-down">
+				<div class="card white">
+					<div class="card-content teal-text">						
+						<ul class="collapsible z-depth-0" data-collapsible="expandable">
+							<li>
+								<div class="collapsible-header active"><b>Dashboard</b></div>
+								<div class="collapsible-body">									
+									<ul class="collection with-header">
+										<a href="account-home" class="collection-item waves-effect"><i class="material-icons left">home</i>My Profile</a>
+										<div class="divider"></div>
+										<a href="#!" class="collection-item waves-effect"><i class="material-icons left">close</i>Logout</a>
+									</ul>									
+								</div>
+							</li>
+							<li>
+								<div class="collapsible-header active"><b>Services</b></div>
+								<div class="collapsible-body">
+									<ul class="collection with-header">
+										<a href="#!" class="collection-item active waves-effect"><i class="material-icons left">note_add</i>Tambah Iklan Baru</a>
+										<a href="#!" class="collection-item waves-effect"><i class="material-icons left">shopping_cart</i>Pesan<span class="new badge teal white-text">99</span></a>
+										<a href="#!" class="collection-item waves-effect"><i class="material-icons left">beach_access</i>Peralatan Pesta<span class="new badge" data-badge-caption="item">400</span></a>
+										<a href="#!" class="collection-item waves-effect"><i class="material-icons left">work</i>Paket Pesta<span class="new badge" data-badge-caption="paket">4</span></a>
+									</ul>									
+								</div>
+							</li>
+							<li>
+								<div class="collapsible-header"><b>Other</b></div>
+								<div class="collapsible-body">
+									<ul class="collection with-header">
+										<a href="#delete_account" class="collection-item modal-trigger waves-effect"><i class="material-icons left">close</i>Delete this account</a>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>					
+				</div>
+			</div>			
+			<div class="col s12 l9 right">
+				<div class="card white">
+					<div class="card-content teal-text">
+						<h5><b>Mari Beriklan di Sewania.com!</b></h5>	
+						<p>Situs sewa jasa dan barang online, untuk mulai beriklan silahkan isi form dibawah ini dengan informasi yang sesuai dengan layanan yang anda sediakan.</p>
+						<div class="divider"></div>
+							<div class="container">
+								<form action="">
+									<div class="row">
+										<div class="input-field">
+											<div class="col m3 s12">
+												<label for="j_iklan" class="teal-text">Judul Iklan <sup class="red-text">*</sup></label>					
+											</div>
+											<div class="col m9 s12">
+												<br class="hide-on-med-and-up">
+												<input type="text" id="j_iklan" class="validate" required="" name="j_iklan">
+											</div>								
+										</div>
+									</div>
+									<div class="row">
+										<div class="input-field">
+											<div class="col m3 s12">
+												<label for="kategori" class="teal-text col m3">Kategori <sup class="red-text">*</sup></label>
+												<br class="hide-on-med-and-up">
+												<br class="hide-on-med-and-up">
+											</div>
+											<div class="col m9 s12">
+												<select name="kategori" id="kategori">
+											      <option value="" disabled selected>--- Pilih Kategori---</option>
+											      <option value="1">Paket Pesta</option>
+											      <option value="2">Perlengkapan Pesta</option>											      
+											    </select>											    
+											</div>								
+										</div>
+									</div>
+									<div class="row" id="sub_kategori_event">
+										<div class="input-field">
+											<div class="col m3 s12">
+												<label for="s_kategori" class="teal-text col m3">Sub Kategori <sup class="red-text">*</sup></label>
+												<br class="hide-on-med-and-up">
+												<br class="hide-on-med-and-up">
+											</div>
+											<div class="col m9 s12">
+												<select name="s_kategori" id="s_kategori">
+											      <option value="" disabled selected>--- Pilih Sub Kategori---</option>
+											      <option value="1">Paket Pernikahan</option>
+											      <option value="2">Paket Acara Adat Bali</option>
+											      <option value="3">Paket Catering</option>
+											      <option value="4">Paket Ulang Tahun</option>
+											      <option value="5">Paket Dekorasi</option>											      
+											    </select>											    
+											</div>								
+										</div>
+									</div>
+									<div class="row" id="sub_kategori_perlengkapan">
+										<div class="input-field">
+											<div class="col m3 s12">
+												<label for="s_kategori" class="teal-text col m3">Sub Kategori <sup class="red-text">*</sup></label>
+												<br class="hide-on-med-and-up">
+												<br class="hide-on-med-and-up">
+											</div>
+											<div class="col m9 s12">
+												<select name="s_kategori" id="s_kategori">
+											      <option value="" disabled selected>--- Pilih Sub Kategori---</option>
+											      <option value="1">Tenda</option>
+											      <option value="2">Kursi</option>
+											      <option value="3">Meja</option>
+											      <option value="4">Sound System</option>
+											      <option value="5">Panggung/Podioum/Mimbar</option>
+											      <option value="6">Lighting</option>
+											      <option value="7">Standing AC</option>
+											      <option value="8">Alat Music</option>
+											      <option value="9">Riging</option>											      
+											      <option value="10">Alat Catering</option>
+											      <option value="11">Genset</option>
+											      <option value="12">Flooring</option>
+											      <option value="13">TV/Screen + Infocus</option>
+											      <option value="14">Mobil Pengantin</option>											      
+											    </select>											    
+											</div>								
+										</div>
+									</div>
+									<div class="row">
+										<div class="input-field">
+											<div class="col m3 s12">
+												<label for="d_produk" class="teal-text">Deskripsi Produk <sup class="red-text">*</sup></label>																		
+											</div>
+											<div class="col m9 s12">
+												<br class="hide-on-med-and-up">
+												<textarea name="d_produk" id="d_produk" class="materialize-textarea"></textarea>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="input-field">
+											<div class="col m3 s12">
+												<label for="harga_produk" class="teal-text hide-on-med-and-up">Harga <sup class="red-text">*</sup></label>					
+											</div>
+											<div class="col m9 s12">
+												<br class="hide-on-med-and-up">
+												<span class="prefix">Rp</span><input type="number" id="harga_produk" class="validate" required="" name="harga_produk">
+											</div>								
+										</div>
+									</div>
+									<br>									
+								
+							</div>
+								<div class="row">
+									<div class="col s12">
+										<h5><b>Jangkauan Layanan</b></h5>
+										<p>Pilih lokasi dimana anda beroprasi, Semakin sepesifik lokasi anda semakin tepat customer yang anda dapatkan.</p>
+									</div>
+									<hr>
+									<div class="container">
+										<div class="row">
+											<div class="input-field">
+												<div class="col m3 s12">
+													<label for="lokasi" class="teal-text">Kota/Kabupaten <sup class="red-text">*</sup></label>					
+												</div>
+												<div class="col m9 s12">
+													<br class="hide-on-med-and-up">
+													<input type="text" id="lokasi" class="validate" required="" name="lokasi">
+												</div>								
+											</div>
+										</div>
+										<div class="row">
+											<div class="file-field input-field">
+										      <div class="btn">
+										        <span>File</span>
+										        <input type="file" multiple>
+										      </div>
+										      <div class="file-path-wrapper">
+										        <input class="file-path validate" type="text" placeholder="Upload gambar disini">
+										      </div>
+										    </div>
+										</div>
+										<div class="row center-align">
+											<button type="submit" class="btn">Posting</button>
+										</div>
+									</div>
+								</div>								
+							</form>						
+					</div>					
+				</div>
+			</div>
+		</div>
+	</main>
+	
+	<footer class="page-footer grey lighten-3">		
+		<div class="footer-copyright white">
+			<div class="container grey-text">
+				© 2016 Design By LeakWEB
+				<a class="grey-text right" href="http://leakweb.github.io">LeakWeb</a>
+			</div>
+		</div>
+	</footer>
+	
+	<!-- Modal Structure -->
+	<div id="delete_account" class="modal">
+		<div class="modal-content">
+			<h4>Delete this Account ?</h4>
+			<p><b class="red-text">Hati-hati</b>, tindakan ini akan benar menghapus data anda dari database kami. Untuk alasan security tolong masukan kembali nama toko secara terbalik. pada form dibawah ini!</p>
+			<form action="">				
+				<div class="input-field col s12">
+					<input type="text" class="validate" required="" autofocus="" placeholder="Masukan nama toko anda">
+				</div>
+		</div>
+		<div class="modal-footer">				
+				<button class="btn btn-flat waves-effect modal-close">Cancel</button>
+				<button type="submit" class="btn btn-flat waves-effect">Delete</button>
+			</form>
+		</div>
+	</div>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="assets/js/materialize.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.modal-trigger').leanModal();
+		$('select').material_select();
+		$('.button-collapse').sideNav({
+			edge: 'left'
+		});
+	});
+</script>
+<script>
+	$(document).ready(function(){
+	$("#sub_kategori_event").hide();
+	$("#sub_kategori_perlengkapan").hide();
+	$( "#kategori" )
+		.change(function() {
+			val_kategori = ""
+			$( "#kategori option:selected" ).each(function() {
+				val_kategori = $( this ).val();
+				if (val_kategori == 1) {
+					$("#sub_kategori_event").show();
+					$("#sub_kategori_perlengkapan").hide();
+				}else{
+					$("#sub_kategori_perlengkapan").show();
+					$("#sub_kategori_event").hide();
+				}											
+			});
+		});
+});
+</script>
+</body>
+</html>
