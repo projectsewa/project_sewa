@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sewania : Nama Toko</title>
+	<link rel="icon" href="assets/img/logo/logo.png" type="image/png" sizes="16x16">
+	<link rel="stylesheet" href="assets/css/materialize.css">	
+	<link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="assets/css/pace.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="assets/js/pace.js"></script>
+    <script>
+	    paceOptions = {
+	      elements: true
+	    };
+	</script>           
+</head>
+<body class="grey lighten-3">	
+	<nav class="white">
+		<div class="nav-wrapper">
+			<div class="container">
+				<a href="#!" class="brand-logo teal-text"><i class="material-icons">store</i>Nama Toko</a>
+				<ul class="right hide-on-med-and-down">
+					<li class="teal-text">Username</li>
+					<li><img src="assets/img/ava/1.png" class="responsive-img circle brand-logo" alt="" width="50px"></li>					
+				</ul>							
+			</div>
+
+			<a href="#" data-activates="mobile-demo" class="button-collapse grey-text"><i class="material-icons">menu</i></a>						
+			<!-- navbar for mobile -->
+			<ul class="side-nav teal lighten-1" id="mobile-demo">				
+				<li><h5 class="center-align"><b>Nama Toko</b></h5></li>
+				<div class="divider"></div>
+				<li class="white"><a href="#!" class="teal-text"><b>Dashboard</b></a></li>
+				<li class="active"><a href="#!" class="white-text waves-effect"><i class="material-icons left white-text">home</i>My Profile</a></li>
+				<li><a href="#!" class="white-text waves-effect"><i class="material-icons left white-text">close</i>Logout</a></li>
+				<div class="divider"></div>
+				<li class="white"><a href="#!" class="teal-text"><b>Services</b></a></li>
+				<li><a href="#!" class="white-text waves-effect"><i class="material-icons left white-text">shopping_cart</i>Pesan<span class="new badge">99</span></a></li>
+				<li><a href="#!" class="white-text waves-effect"><i class="material-icons left white-text">beach_access</i>Peralatan Pesta<span class="new badge" data-badge-caption="item">400</span></a></li>
+				<li><a href="#!" class="white-text waves-effect"><i class="material-icons left white-text">work</i>Paket Pesta<span class="new badge" data-badge-caption="paket">4</span></a></li>				
+			</ul>
+		</div>
+	</nav>
+	
+	<main>
+		<div class="row">
+			<div class="col s12 m3 left hide-on-med-and-down">
+				<div class="card white">
+					<div class="card-content teal-text">						
+						<ul class="collapsible z-depth-0" data-collapsible="expandable">
+							<li>
+								<div class="collapsible-header active"><b>Dashboard</b></div>
+								<div class="collapsible-body">									
+									<ul class="collection with-header">
+										<a href="#!" class="collection-item active waves-effect"><i class="material-icons left">home</i>My Profile</a>
+										<div class="divider"></div>
+										<a href="#!" class="collection-item waves-effect"><i class="material-icons left">close</i>Logout</a>
+									</ul>									
+								</div>
+							</li>
+							<li>
+								<div class="collapsible-header active"><b>Services</b></div>
+								<div class="collapsible-body">
+									<ul class="collection with-header">
+										<a href="#!" class="collection-item waves-effect"><i class="material-icons left">shopping_cart</i>Pesan<span class="new badge teal white-text">99</span></a>
+										<a href="#!" class="collection-item waves-effect"><i class="material-icons left">beach_access</i>Peralatan Pesta<span class="new badge" data-badge-caption="item">400</span></a>
+										<a href="#!" class="collection-item waves-effect"><i class="material-icons left">work</i>Paket Pesta<span class="new badge" data-badge-caption="paket">4</span></a>
+									</ul>									
+								</div>
+							</li>
+							<li>
+								<div class="collapsible-header"><b>Other</b></div>
+								<div class="collapsible-body">
+									<ul class="collection with-header">
+										<a href="#delete_account" class="collection-item modal-trigger waves-effect"><i class="material-icons left">close</i>Delete this account</a>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>					
+				</div>
+			</div>
+			<div class="col s12 l9 right">
+				<div class="card white">
+					<div class="card-content teal-text">						
+						<div class="row">
+							<div class="col s12">
+								<h5><i class="material-icons">shopping_cart</i> Pesan</h5>
+								<div class="row divider"></div>
+								<div class="col m6 s12">
+									<p>
+      									<input type="checkbox" onclick="checkAll()" id="checkAll" />
+      									<label for="checkAll">Select: All | </label>
+      									<a class="waves-effect waves-light red btn"><i class="material-icons right">close</i>Delete</a>
+    								</p>
+								</div>
+								<div class="col m6 s12">
+									<div class="row">
+										<div class="input-field">
+											<div class="col m2 s3">
+												<label for="filter">Search <br>
+                      								<a title="clear filter" class="clear-filter" href="#clear">[clear]</a>
+                      							</label>		
+											</div>
+											<div class="col m10 s9">
+												<input type="text" id="search" name="search" placeholder="filter">
+												<br class="hide-on-med-and-up">
+												<br class="hide-on-med-and-up">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col s12">
+										<table class="responsive-table" id="manageTable" data-filter="#filter" data-filter-text-only="true">
+											<thead>
+												<tr>
+													<th>Select</th>
+													<th>Photo</th>
+													<th>Ads Details</th>
+													<th>Price</th>
+													<th>Option</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<p class="checkbox">
+	      													<input type="checkbox" id="check1"/>
+	      													<label for="check1"></label>
+	    												</p>
+													</td>
+													<td>
+														<a href="ads-detail">
+															<img  class="responsive-img" src="/project/git/project_sewa/assets/img/item/tp/Image00014.jpg" alt="img">
+														</a>
+													</td>
+													<td>
+														<div>
+															<p><strong> <a href="ads-details.html" title="Brend New Nexus 4">Brend New Nexus 4</a> </strong></p>
+                        									<p> <strong> Posted On </strong>: 02-Oct-2014, 04:38 PM </p>
+                        									<p> <strong>Visitors </strong>: 221 <strong>Located In:</strong> New York </p>
+                        								</div>
+													</td>
+													<td><strong>Rp. 2.600.000</strong></td>
+													<td>
+														<div>
+									                        <p class="option"><a class="waves-effect waves-light btn"><i class="material-icons left">edit</i>Edit</a></p>
+									                        <p class="option"><a class="waves-effect waves-light orange btn"><i class="material-icons left">share</i>Share</a></p>
+									                        <p class="option"><a class="waves-effect waves-light red btn"><i class="material-icons left">delete</i>Delete</a></p>
+                      									</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="selector-td">
+														<p class="checkbox">
+	      													<input type="checkbox" id="check1"/>
+	      													<label for="check1"></label>
+	    												</p>
+													</td>
+													<td class="image-td">
+														<a href="ads-detail">
+															<img  class="responsive-img" src="/project/git/project_sewa/assets/img/item/tp/Image00014.jpg" alt="img">
+														</a>
+													</td>
+													<td class="detail-td">
+														<div>
+															<p><strong> <a href="ads-details.html" title="Brend New Nexus 4">Brend New Nexus 4</a> </strong></p>
+                        									<p> <strong> Posted On </strong>: 02-Oct-2014, 04:38 PM </p>
+                        									<p> <strong>Visitors </strong>: 221 <strong>Located In:</strong> New York </p>
+                        								</div>
+													</td>
+													<td class="price-td"><strong>Rp. 2.600.000</strong></td>
+													<td class="option-td">
+														<div>
+									                        <p class="option"><a class="waves-effect waves-light btn"><i class="material-icons left">edit</i>Edit</a></p>
+									                        <p class="option"><a class="waves-effect waves-light orange btn"><i class="material-icons left">share</i>Share</a></p>
+									                        <p class="option"><a class="waves-effect waves-light red btn"><i class="material-icons left">delete</i>Delete</a></p>
+                      									</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<p class="checkbox">
+	      													<input type="checkbox" id="check1"/>
+	      													<label for="check1"></label>
+	    												</p>
+													</td>
+													<td>
+														<a href="ads-detail">
+															<img  class="responsive-img" src="/project/git/project_sewa/assets/img/item/tp/Image00014.jpg" alt="img">
+														</a>
+													</td>
+													<td>
+														<div>
+															<p><strong> <a href="ads-details.html" title="Brend New Nexus 4">Brend New Nexus 4</a> </strong></p>
+                        									<p> <strong> Posted On </strong>: 02-Oct-2014, 04:38 PM </p>
+                        									<p> <strong>Visitors </strong>: 221 <strong>Located In:</strong> New York </p>
+                        								</div>
+													</td>
+													<td><strong>Rp. 2.600.000</strong></td>
+													<td>
+														<div>
+									                        <p class="option"><a class="waves-effect waves-light btn"><i class="material-icons left">edit</i>Edit</a></p>
+									                        <p class="option"><a class="waves-effect waves-light orange btn"><i class="material-icons left">share</i>Share</a></p>
+									                        <p class="option"><a class="waves-effect waves-light red btn"><i class="material-icons left">delete</i>Delete</a></p>
+                      									</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</main>
+	
+	<footer class="page-footer grey lighten-3">		
+		<div class="footer-copyright white">
+			<div class="container grey-text">
+				© 2016 Design By LeakWEB
+				<a class="grey-text right" href="http://leakweb.github.io">LeakWeb</a>
+			</div>
+		</div>
+	</footer>
+	
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="assets/js/materialize.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.modal-trigger').leanModal();
+		$('select').material_select();
+		$('.button-collapse').sideNav({
+			edge: 'left'
+		});
+	});
+</script>
+</body>
+</html>
