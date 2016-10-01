@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Sewania : Nama Toko</title>
 	<link rel="icon" href="assets/img/logo/logo.png" type="image/png" sizes="16x16">
-	<link rel="stylesheet" href="assets/css/materialize.css">	
+	<link rel="stylesheet" href="assets/css/materialize.min.css">	
 	<link rel="stylesheet" href="assets/css/custom.css">
 	<link rel="stylesheet" href="assets/css/pace.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	   
@@ -168,6 +168,17 @@
 									<div class="row">
 										<div class="input-field">
 											<div class="col m3 s12">
+												<label for="j_acara" class="teal-text">Jenis Acara <sup class="red-text">*</sup></label>					
+											</div>
+											<div class="col m9 s12">
+												<br class="hide-on-med-and-up">
+												<input type="text" id="j_acara" class="validate" required="" name="j_acara">
+											</div>								
+										</div>
+									</div>
+									<div class="row">
+										<div class="input-field">
+											<div class="col m3 s12">
 												<label for="d_produk" class="teal-text">Deskripsi Produk <sup class="red-text">*</sup></label>																		
 											</div>
 											<div class="col m9 s12">
@@ -200,11 +211,28 @@
 										<div class="row">
 											<div class="input-field">
 												<div class="col m3 s12">
+													<label for="provinsi" class="teal-text">Provinsi <sup class="red-text">*</sup></label>
+													<br class="hide-on-med-and-up">
+													<br class="hide-on-med-and-up">
+												</div>
+												<div class="col m9 s12">
+													<select name="provinsi" id="provinsi">
+												      <option value="" disabled selected>--- Pilih Provinsi ---</option>
+												      <option value="1">Bali</option>
+												      <option value="2">Option 2</option>
+												      <option value="3">Option 3</option>
+												    </select>
+												</div>								
+											</div>
+										</div>
+										<div class="row">
+											<div class="input-field">
+												<div class="col m3 s12">
 													<label for="lokasi" class="teal-text">Kota/Kabupaten <sup class="red-text">*</sup></label>					
 												</div>
 												<div class="col m9 s12">
 													<br class="hide-on-med-and-up">
-													<input type="text" id="lokasi" class="validate" required="" name="lokasi">
+													<input type="text" id="lokasi" class="validate" data-role="materialtags" required="" name="lokasi">
 												</div>								
 											</div>
 										</div>
@@ -258,7 +286,7 @@
 	</div>
 
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-<script src="assets/js/materialize.js"></script>
+<script src="assets/js/materialize.min.js"></script>
 <script>
 	$(document).ready(function(){
 		$('.modal-trigger').leanModal();
@@ -287,6 +315,25 @@
 			});
 		});
 });
+</script>
+<script>
+	$( "#provinsi" ).change(function(){
+		val_provinsi = ""
+		$( "#provinsi option:selected" ).each(function(){
+			val_provinsi = $(this).val();
+			$.ajax({
+				url : "http://127.0.0.1/front-end/project_sewa_CI/api/region/"+val_provinsi,
+				type : "GET",
+				dataType: "json",
+				data : { get_param : 'value' },
+				success : function(data){									
+					for(i = 0; i < data.length; i++){
+						console.log(data[i]['name']);
+					}
+				}
+			});
+		});
+	});
 </script>
 </body>
 </html>
