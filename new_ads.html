@@ -230,9 +230,9 @@
 												<div class="col m3 s12">
 													<label for="lokasi" class="teal-text">Kota/Kabupaten <sup class="red-text">*</sup></label>					
 												</div>
-												<div class="col m9 s12">
+												<div class="col m9 s12" id="lokasi" >
 													<br class="hide-on-med-and-up">
-													<input type="text" id="lokasi" class="validate" data-role="materialtags" required="" name="lokasi">
+													<input type="text" class="validate typeahead" required="" name="lokasi">
 												</div>								
 											</div>
 										</div>
@@ -287,6 +287,7 @@
 
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="assets/js/materialize.min.js"></script>
+<script src="assets/js/typeahead.js"></script>
 <script>
 	$(document).ready(function(){
 		$('.modal-trigger').leanModal();
@@ -317,23 +318,35 @@
 });
 </script>
 <script>
-	$( "#provinsi" ).change(function(){
-		val_provinsi = ""
-		$( "#provinsi option:selected" ).each(function(){
-			val_provinsi = $(this).val();
-			$.ajax({
-				url : "http://127.0.0.1/front-end/project_sewa_CI/api/region/"+val_provinsi,
-				type : "GET",
-				dataType: "json",
-				data : { get_param : 'value' },
-				success : function(data){									
-					for(i = 0; i < data.length; i++){
-						console.log(data[i]['name']);
+	$(document).ready(function(){
+		$( "#provinsi" ).change(function(){
+			val_provinsi = ""
+			$( "#provinsi option:selected" ).each(function(){
+				val_provinsi = $(this).val();
+				var kabupaten = [];
+				$.getJSON( "http://127.0.0.1/front-end/project_sewa_CI/api/region/1", function( data ) {				
+					for (var i = 0; i < data.length; i++) {
+						kabupaten.push(data[i].name);
 					}
-				}
+
+				    var Kabupaten = new Bloodhound({
+				        datumTokenizer: Bloodhound.tokenizers.whitespace,
+				        queryTokenizer: Bloodhound.tokenizers.whitespace,	       
+				        local: kabupaten
+				    });
+
+				    Kabupaten.initialize();
+
+				    // $( "input" ).materialtags({
+				    $('#lokasi .typeahead').materialtags({			    	   	
+				        typeaheadjs: {        	       	       
+				            source: Kabupaten
+				        }
+				    });
+			    });
 			});
 		});
-	});
+	});	
 </script>
 </body>
 </html>
