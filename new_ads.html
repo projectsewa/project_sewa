@@ -232,7 +232,8 @@
 												</div>
 												<div class="col m9 s12" id="lokasi" >
 													<br class="hide-on-med-and-up">
-													<input type="text" class="validate typeahead" required="" name="lokasi">
+													<input type="text" class="validate typeahead" required="" >
+													<input type="hidden" id="lok" class="lok" data-language="javascript" name="lokasi">													
 												</div>								
 											</div>
 										</div>
@@ -240,7 +241,51 @@
 											<div class="file-field input-field">
 										      <div class="btn">
 										        <span>File</span>
-										        <input type="file" multiple>
+										        <input type="file">
+										      </div>
+										      <div class="file-path-wrapper">
+										        <input class="file-path validate" type="text" placeholder="Upload gambar disini">
+										      </div>
+										    </div>
+										</div>
+										<div class="row">
+											<div class="file-field input-field">
+										      <div class="btn">
+										        <span>File</span>
+										        <input type="file">
+										      </div>
+										      <div class="file-path-wrapper">
+										        <input class="file-path validate" type="text" placeholder="Upload gambar disini">
+										      </div>
+										    </div>
+										</div>
+										<div class="row">
+											<div class="file-field input-field">
+										      <div class="btn">
+										        <span>File</span>
+										        <input type="file">
+										      </div>
+										      <div class="file-path-wrapper">
+										        <input class="file-path validate" type="text" placeholder="Upload gambar disini">
+										      </div>
+										    </div>
+										</div>
+										<div class="row">
+											<div class="file-field input-field">
+										      <div class="btn">
+										        <span>File</span>
+										        <input type="file">
+										      </div>
+										      <div class="file-path-wrapper">
+										        <input class="file-path validate" type="text" placeholder="Upload gambar disini">
+										      </div>
+										    </div>
+										</div>
+										<div class="row">
+											<div class="file-field input-field">
+										      <div class="btn">
+										        <span>File</span>
+										        <input type="file">
 										      </div>
 										      <div class="file-path-wrapper">
 										        <input class="file-path validate" type="text" placeholder="Upload gambar disini">
@@ -319,32 +364,77 @@
 </script>
 <script>
 	$(document).ready(function(){
+		// $( "#provinsi" ).change(function(){
+		// 	val_provinsi = ""
+		// 	$( "#provinsi option:selected" ).each(function(){
+		// 		val_provinsi = $(this).val();
+		// 		var kabupaten = [];
+		// 		$.getJSON( "http://127.0.0.1/front-end/project_sewa_CI/api/region/1", function( data ) {				
+		// 			for (var i = 0; i < data.length; i++) {
+		// 				kabupaten.push(data[i].name);
+		// 			}
+
+		// 		    var Kabupaten = new Bloodhound({
+		// 		        datumTokenizer: Bloodhound.tokenizers.whitespace,
+		// 		        queryTokenizer: Bloodhound.tokenizers.whitespace,	       
+		// 		        local: kabupaten
+		// 		    });
+
+		// 		    Kabupaten.initialize();
+				    
+		// 		    $('#lokasi .typeahead').materialtags({			    	   	
+		// 		        typeaheadjs: {        	       	       
+		// 		            source: Kabupaten
+		// 		        }
+		// 		    });
+		// 	    });
+		// 	});
+		// });
 		$( "#provinsi" ).change(function(){
-			val_provinsi = ""
-			$( "#provinsi option:selected" ).each(function(){
+			val_provinsi = "";
+			$("#provinsi option:selected").each(function(){
 				val_provinsi = $(this).val();
-				var kabupaten = [];
-				$.getJSON( "http://127.0.0.1/front-end/project_sewa_CI/api/region/1", function( data ) {				
-					for (var i = 0; i < data.length; i++) {
-						kabupaten.push(data[i].name);
-					}
-
-				    var Kabupaten = new Bloodhound({
-				        datumTokenizer: Bloodhound.tokenizers.whitespace,
-				        queryTokenizer: Bloodhound.tokenizers.whitespace,	       
-				        local: kabupaten
+				$.getJSON( "http://127.0.0.1/front-end/project_sewa_CI/api/region/"+val_provinsi, function( data ) {
+					var cities = new Bloodhound({
+				        datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+				        queryTokenizer: Bloodhound.tokenizers.whitespace,
+				        local: data
 				    });
+				    cities.initialize();
 
-				    Kabupaten.initialize();
-
-				    // $( "input" ).materialtags({
-				    $('#lokasi .typeahead').materialtags({			    	   	
-				        typeaheadjs: {        	       	       
-				            source: Kabupaten
+				    var elt = $('#lokasi .typeahead');
+				    elt.materialtags({
+				        itemValue: 'id_region',
+				        itemText: 'name',
+				        typeaheadjs: {
+				            name: 'cities',
+				            displayKey: 'name',
+				            source: cities.ttAdapter()
 				        }
-				    });
-			    });
+				    });	        
+				});
 			});
+		});
+
+		$(function ()
+		{
+		    $('#lokasi .typeahead').on('change', function (event)
+		    {
+		        var $element   = $(event.target),
+		            $container = $element.closest('#lokasi');
+
+		        if (!$element.data('materialtags'))
+		        {
+		            return;
+		        }
+
+		        var val = $element.val();
+		        if (val === null)
+		        {
+		            val = "null";
+		        }		        
+		        $('.lok', $container).val(($.isArray(val) ? JSON.stringify(val) : "\"" + val.replace('"', '\\"') + "\""));	        
+		    }).trigger('change');
 		});
 	});	
 </script>
