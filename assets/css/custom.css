@@ -1,3 +1,9 @@
+@media (max-width:640px){
+  .nama_order{
+    font-size: 14px;
+  }
+}
+
 .logo-signup-partner{
   margin-top: 8%;
 }
