@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sewania - Sewa Peralatan Pesta Online</title>
+	<link rel="icon" href="assets/img/logo/logo.png" type="image/png" sizes="16x16">
+	<link rel="stylesheet" href="assets/css/materialize.css">	
+	<link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="assets/css/pace.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	   
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="assets/js/pace.js"></script>
+    <script>
+	    paceOptions = {
+	      elements: true
+	    };	  
+	</script>
+	<style>
+		.parallax-custom{
+			height: 500px;
+		}
+	</style>           
+</head>
+<body class="grey lighten-3">
+	<!-- menu atas -->
+	<div class="navbar-fixed">
+	<nav class="white">
+		<div class="nav-wrapper">
+			<div class="container">
+				<a href="index" class="brand-logo">
+					<div class="row valign-wrapper">					
+						<img src="assets/img/logo/logo2.png" class="responsive-img left valign" width="200px" alt=""><!-- <h5 class="grey-text"><b>SEWA</b>NIA</h5>					 -->
+					</div>				
+				</a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="login" class="grey-text waves-effect">Login</a></li>
+					<li><a href="signup" class="grey-text waves-effect">Signup</a></li>
+					<li><a href="signup-partner" class="btn waves-effect white-text">Jadi Partner Kami</a></li>					
+				</ul>	
+			</div>
+			
+			<!-- activate side-bav in mobile view -->
+			<a href="#" data-activates="mobile-demo" class="button-collapse grey-text"><i class="material-icons">menu</i></a>			
+			<!-- navbar for mobile -->
+			<ul class="side-nav teal lighten-1" id="mobile-demo">
+				<li><center><img src="assets/img/logo/logo-w.png" class="responsive-img" width="150px" alt=""></center></li>
+				<li><h5 class="center-align"><b>SEWA</b>NIA</h5></li>
+				<hr>
+				<li><a href="login" class="white-text waves-effect">Login</a></li>
+				<li><a href="signup" class="white-text waves-effect">Signup</a></li>
+				<li><a href="signup-partner" class="white-text waves-effect">Jadi Partner Kami</a></li>
+			</ul>
+		</div>
+	</nav>
+	</div>
+	<!-- end menu atas -->
+	<main>
+		<div class="parallax-container parallax-custom">
+			<div class="parallax"><img src="http://www.sewania.com/assets/img/kategori/4.jpg" width="50px"></div>
+		</div>
+		<div class="container">
+			<div class="row">				
+				<div class="col s12">
+					<div class="card">
+						<div class="card-content">							
+							<h5><b>Konsultasikan acara yang akan anda buat dengan kami, kami akan bantu mencari solusi yang terbaik.</b></h5>
+							<div class="divider"></div>
+							<form action="">
+								<div class="row">
+									<div class="row">										
+								        <div class="input-field col m6 s12">
+								          <input placeholder="Nama Anda" id="name" type="text" class="validate">								          
+								        </div>
+								        <div class="input-field col m6 s12">
+								          <input id="tlp" type="text" class="validate" placeholder="No Telphone Yang Dapat Kami Hubungi ">								          
+								        </div>
+								      </div>
+									</div>
+									<div class="row">
+									<div class="input-field">
+										<div class="col s12">
+											<label for="acara" class="teal-text left">Acara Seperti Apa ? <sup class="red-text">*</sup></label>
+											<br class="hide-large-only">
+											<br class="hide-large-only">
+										</div>
+										<div class="col s12">
+											<select name="acara" id="acara">
+										      <option value="" disabled selected>--- Pilih Acara ---</option>
+										      <option value="1">Pernikahan</option>
+										      <option value="2">Pesta Ulang Tahun Anak</option>
+										      <option value="3">Pesta Ulang Tahun Remaja</option>
+										      <option value="4">Festival</option>
+										      <option value="5">Meeting</option>
+										      <option value="6">Acara Adat</option>
+										      <option value="7">Garden or Beach Party</option>
+										      <option value="8">Live Concert</option>
+										      <option value="9">Bazzar</option>
+										    </select>
+										</div>								
+									</div>
+								</div>
+								<div class="row">
+									<div class="input-field">
+										<div class="col s12">
+											<label for="tamu" class="teal-text left">Berapa Banyak Tamunya ? <sup class="red-text">*</sup></label>
+											<br class="hide-large-only">
+											<br class="hide-large-only">
+										</div>
+										<div class="col s12">
+											<select name="tamu" id="tamu">
+										      <option value="" disabled selected>--- Pilih Jumlah Tamu ---</option>
+										      <option value="1">Kurang dari 25</option>
+										      <option value="2">25-50 </option>
+										      <option value="3">50-100</option>
+										      <option value="4">100-150</option>
+										      <option value="5">150-200</option>
+										      <option value="6">200-300</option>
+										      <option value="7">Lebih dari 300</option>
+										      <option value="8">Belum Tahu</option>										      
+										    </select>
+										</div>								
+									</div>
+								</div>
+								<div class="row">
+									<div class="input-field">
+										<div class="col s12">
+											<label for="des_acara" class="teal-text left">Deskripsi Acara <sup class="red-text">*</sup></label>										
+										</div>
+										<div class="col s12">
+											<br class="hide-large-only">											
+											<textarea name="des_acara" id="des_acara" class="materialize-textarea" placeholder="Masukkan deskripsi acara anda secara detail"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="input-field">
+										<div class="col s12">
+											<label for="start_acara" class="teal-text left" style="word-wrap: break-word">Kapan Acara Berlangsung ? <sup class="red-text">*</sup></label>																
+										</div>
+										<div class="col s12">
+											<br class="hide-large-only">											
+											<input type="date" id="start_acara" class="validate datepicker" required="" name="start_acara" placeholder="klik untuk menampilkan kalender">									
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="input-field">
+										<div class="col s12">
+											<label for="daerah" class="teal-text left">Daerah Acara Berlangsung ? <sup class="red-text">*</sup></label>
+											<br class="hide-large-only">
+											<br class="hide-large-only">
+										</div>
+										<div class="col s12">
+											<select name="daerah" id="daerah">
+										      <option value="" disabled selected>--- Pilih Acara ---</option>
+										      <option value="1">Pernikahan</option>
+										      <option value="2">Pesta Ulang Tahun Anak</option>
+										      <option value="3">Pesta Ulang Tahun Remaja</option>
+										      <option value="4">Festival</option>
+										      <option value="5">Meeting</option>
+										      <option value="6">Acara Adat</option>
+										      <option value="7">Garden or Beach Party</option>
+										      <option value="8">Live Concert</option>
+										      <option value="9">Bazzar</option>
+										    </select>
+										</div>								
+									</div>
+								</div>
+								<div class="row">
+									<button type="submit" class="btn waves-effect btn-large right">Submit</button>
+								</div>
+							</form>		
+						</div>						
+					</div>
+				</div>				
+			</div>
+		</div>
+	</main>
+	<!-- footer -->
+	<footer class="page-footer white">
+		<div class="container">
+			<div class="row center-align grey-text">
+				<div class="col m3 s12">
+					<h5><b>INFORMASI</b></h5>					
+					<a href="#!" class="grey-text waves-effect ">Syarat & Ketentuan</a><br>
+					<a href="#!" class="grey-text waves-effect ">Blog</a><br>
+					<a href="#!" class="grey-text waves-effect ">Team Kami</a><br>
+					<a href="#!" class="grey-text waves-effect ">Lowongan</a><br>
+				</div>
+				<div class="col m3 s12">
+					<h5><b>FOLLOW US</b></h5>
+					<a href="" class="grey-text col 2"><i class="fa fa-facebook fa-2x"></i></a>
+					<a href="" class="grey-text col 2"><i class="fa fa-instagram fa-2x"></i></a>
+					<a href="" class="grey-text col 2"><i class="fa fa-google-plus fa-2x"></i></a>
+					<a href="" class="grey-text col 2"><i class="fa fa-youtube fa-2x"></i></a>
+				</div>
+				<div class="col m3 s12">
+					<h5><b>HELP</b></h5>
+					<a href="#!" class="grey-text waves-effect ">Cara Kerja ?</a><br>
+					<a href="#!" class="grey-text waves-effect ">Keamanan</a><br>
+					<a href="#!" class="grey-text waves-effect ">FAQ</a><br>
+					<a href="#!" class="grey-text waves-effect ">Kontak US</a><br>
+				</div>
+				<div class="col m3 s12">
+					<a href="#!"><img src="assets/img/logo/logo2.png" class="responsive-img" alt=""></a>					
+					<button class="btn btn-large teal waves-effect">SUBSCRIBE</button>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container grey-text">
+				© 2016 Design By LeakWEB
+				<a class="grey-text right" href="http://leakweb.github.io">LeakWEB Contact</a>
+			</div>
+		</div>
+	</footer>
+	<!-- end footer -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="assets/js/materialize.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.button-collapse').sideNav();
+		$('.slider').slider({full_width: true, height: 450});
+		$('.parallax').parallax();
+		$('select').material_select();
+	});
+</script>
+</body>
+</html>

@@ -4,6 +4,13 @@
   }
 }
 
+.collapsible{
+  margin: 0px ;
+}
+.collection a.collection-item{
+  color: black;
+}
+
 .logo-signup-partner{
   margin-top: 8%;
 }
